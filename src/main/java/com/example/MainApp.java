@@ -3,12 +3,9 @@ package com.example;
 import static com.example.db.tables.Employee.EMPLOYEE;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
-import org.h2.jdbc.JdbcConnection;
 import org.jooq.impl.DSL;
 
 
@@ -29,7 +26,7 @@ public class MainApp {
     }
 
     /**
-     * This method 
+     * This method alters the name of an employee
      * @param conn The JDBC connection to use
      * @param id The id of the employe whose name we will change
      * @param firstName The new firstName of the employee
@@ -73,7 +70,6 @@ public class MainApp {
             System.err.println("Encountered an SQL error: "+e.getMessage());
         }
     }
-
 
     public static void main(String[] args) {
         new MainApp();
